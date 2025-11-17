@@ -80,7 +80,7 @@ export default function ContactPage() {
           CONTACT
         </h1>
         <p className="text-sm text-center mb-16" style={{ color: "#8A7F66" }}>
-          Get in touch for inquiries and commissions
+          Get in touch for inquiries
         </p>
 
         {/* Contact Form Section */}
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   className="text-base hover:opacity-70 transition"
                   style={{ color: "#8A7F66" }}
                 >
-                  omhlezuma29@gmal.com
+                  omhlezuma29@gmail.com
                 </a>
               </div>
               <div>
@@ -246,7 +246,7 @@ export default function ContactPage() {
           {/* Social Links with Icons (Unchanged) */}
           <div className="flex justify-center items-center gap-12">
             {/* ... (Icons remain the same) ... */}
-           
+
             <a
               href="https://www.instagram.com/shotsbyozee/"
               target="_blank"
