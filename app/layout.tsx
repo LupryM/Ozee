@@ -8,8 +8,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ShotsByOzee",
-  description:
-    "Award-winning photographer specializing in architecture, portrait, and landscape photography. Discover stunning visual stories.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.svg",

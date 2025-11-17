@@ -9,7 +9,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Award-winning photographer specializing in architecture, portrait, and landscape photography. Transforming ordinary moments into extraordinary visual stories.
+          
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
