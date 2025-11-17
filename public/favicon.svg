@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Camera body -->
+  <rect x="80" y="120" width="352" height="280" rx="30" fill="#8A7F66"/>
+  
+  <!-- Flash -->
+  <rect x="140" y="80" width="50" height="60" rx="8" fill="#8A7F66"/>
+  
+  <!-- Lens outer circle -->
+  <circle cx="256" cy="260" r="95" fill="none" stroke="#110C0A" stroke-width="25"/>
+  
+  <!-- Lens inner circle -->
+  <circle cx="256" cy="260" r="55" fill="#110C0A"/>
+  
+  <!-- Lens shine -->
+  <path d="M 230 235 A 25 25 0 0 1 255 215" fill="none" stroke="#8A7F66" stroke-width="12" stroke-linecap="round"/>
+</svg>
