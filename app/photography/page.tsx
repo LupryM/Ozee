@@ -7,9 +7,12 @@ export default function PhotographyPage() {
       <Navbar />
 
       {/* Photography Heading */}
-      <div className="py-16 text-center" style={{ backgroundColor: "#110C0A" }}>
+      <div
+        className="py-8 sm:py-12 md:py-16 text-center"
+        style={{ backgroundColor: "#110C0A" }}
+      >
         <h1
-          className="text-6xl font-light tracking-widest"
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-light tracking-widest px-6 sm:px-4"
           style={{ color: "#8A7F66" }}
         >
           PHOTOGRAPHY
@@ -17,7 +20,10 @@ export default function PhotographyPage() {
       </div>
 
       {/* Gallery - now with full brown background */}
-      <div style={{ backgroundColor: "#110C0A" }} className="py-16">
+      <div
+        style={{ backgroundColor: "#110C0A" }}
+        className="py-8 sm:py-12 md:py-16"
+      >
         <Gallery />
       </div>
     </main>
