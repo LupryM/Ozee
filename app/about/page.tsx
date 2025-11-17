@@ -54,7 +54,7 @@ export default function AboutPage() {
                   </span>
                   <span className="block">
                     I believe in building real connections with the people I
-                    work with understanding their vision, personality, and
+                    work with by understanding their vision, personality, and
                     purpose. Whether it’s creative concepts, portraits, or
                     professional events, every project is approached with care,
                     honesty, and a commitment to excellence.

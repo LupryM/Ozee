@@ -14,7 +14,7 @@ interface FormData {
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Define the recipient details (change these to your actual addresses)
-const RECIPIENT_EMAIL = "omhlezuma29@gmal.com";
+const RECIPIENT_EMAIL = "omhlezuma29@gmail.com";
 const SENDER_EMAIL = "onboarding@resend.dev"; // Must be a verified email
 
 export async function POST(request: Request) {
