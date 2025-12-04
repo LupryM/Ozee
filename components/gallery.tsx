@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -27,7 +29,6 @@ export default function Gallery() {
     { id: 18, image: "/e.webp" },
   ];
 
-  // Convert your items to the format the library expects
   const slides = galleryItems.map((item) => ({ src: item.image }));
 
   return (
@@ -41,7 +42,6 @@ export default function Gallery() {
             {galleryItems.map((item, i) => (
               <div
                 key={item.id}
-                // When clicked, we set the index to the specific image number
                 onClick={() => setIndex(i)}
                 className="aspect-square overflow-hidden cursor-pointer"
               >
@@ -57,17 +57,16 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* The Lightbox Component */}
       <Lightbox
         index={index}
         open={index >= 0}
         close={() => setIndex(-1)}
         slides={slides}
-        plugins={[Zoom]} // Activates the zoom feature
-        animation={{ zoom: 500 }} // Smooth zoom animation speed
+        plugins={[Zoom]}
+        animation={{ zoom: 500 }}
         zoom={{
-          maxZoomPixelRatio: 3, // How far you can zoom in
-          scrollToZoom: true, // Allow mouse wheel to zoom
+          maxZoomPixelRatio: 3,
+          scrollToZoom: true,
         }}
       />
     </>
