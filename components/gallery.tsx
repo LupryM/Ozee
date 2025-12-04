@@ -1,4 +1,11 @@
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
+
 export default function Gallery() {
+  const [index, setIndex] = useState(-1);
+
   const galleryItems = [
     { id: 1, image: "/k.webp" },
     { id: 2, image: "/o.webp" },
@@ -20,28 +27,49 @@ export default function Gallery() {
     { id: 18, image: "/e.webp" },
   ];
 
+  // Convert your items to the format the library expects
+  const slides = galleryItems.map((item) => ({ src: item.image }));
+
   return (
-    <section
-      className="px-2 sm:px-4 md:px-6 lg:px-8 pb-16 sm:pb-20 md:pb-24"
-      style={{ backgroundColor: "#110C0A" }}
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
-          {galleryItems.map((item) => (
-            <div
-              key={item.id}
-              className="aspect-square overflow-hidden cursor-pointer"
-            >
-              <img
-                src={item.image || "/placeholder.svg"}
-                alt={`Gallery item ${item.id}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
-          ))}
+    <>
+      <section
+        className="px-2 sm:px-4 md:px-6 lg:px-8 pb-16 sm:pb-20 md:pb-24"
+        style={{ backgroundColor: "#110C0A" }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+            {galleryItems.map((item, i) => (
+              <div
+                key={item.id}
+                // When clicked, we set the index to the specific image number
+                onClick={() => setIndex(i)}
+                className="aspect-square overflow-hidden cursor-pointer"
+              >
+                <img
+                  src={item.image || "/placeholder.svg"}
+                  alt={`Gallery item ${item.id}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* The Lightbox Component */}
+      <Lightbox
+        index={index}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        slides={slides}
+        plugins={[Zoom]} // Activates the zoom feature
+        animation={{ zoom: 500 }} // Smooth zoom animation speed
+        zoom={{
+          maxZoomPixelRatio: 3, // How far you can zoom in
+          scrollToZoom: true, // Allow mouse wheel to zoom
+        }}
+      />
+    </>
   );
 }
