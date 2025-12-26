@@ -18,15 +18,21 @@ export default function Gallery() {
     { id: 7, image: "/d.webp" },
     { id: 8, image: "/c.webp" },
     { id: 9, image: "/g.webp" },
-    { id: 10, image: "/q.webp" },
+    { id: 10, image: "/z.jpg" },
     { id: 11, image: "/r.webp" },
     { id: 12, image: "/l.webp" },
-    { id: 13, image: "/n.webp" },
+    { id: 13, image: "/q.webp" },
     { id: 14, image: "/b.webp" },
     { id: 15, image: "/m.webp" },
-    { id: 16, image: "/h.webp" },
+    { id: 16, image: "/y.webp" },
     { id: 17, image: "/a.webp" },
     { id: 18, image: "/e.webp" },
+     { id: 19, image: "/aa.webp" }, 
+     { id: 20, image: "/w.webp" }, 
+     { id: 21, image: "/x.webp" }, 
+     { id: 22, image: "/h.webp" }, 
+     { id: 23, image: "/n.webp" },
+   
   ];
 
   const slides = galleryItems.map((item) => ({ src: item.image }));
